@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    
+</head>
+<body>
+    <h1>13. DOM Query Selector</h1><br>
 
+    <p class="sameClass">I'm Paragraph 1 with class "sameClass"</p>
+    <p id="random">I'm Paragraph 2 with id "random"</p>
+    <p class="sameClass">I'm Paragraph 3 with class "sameClass"</p>
+    <p class="otherClass">I'm Paragraph 4 with class "otherClass"</p>
+    
+<script>
+    
+    const paragraphs = document.querySelectorAll(".sameClass");
+
+for (let i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].style.color = "red";
+}
+
+</script>
+</body>
+</html>
