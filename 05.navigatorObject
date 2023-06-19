@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+</head>
+<body>
+    <h1>05. Navigator Object</h1><br>
 
+    <h3 id="browser"></h3>
+    <h3 id="version"></h3>
+    
+<script>
+    //part a
+    let browser = navigator.appName;
+    let version =  navigator.appVersion;
+
+    //part b
+    document.getElementById("browser").innerHTML ='Your browser is: '+browser;
+    document.getElementById("version").innerHTML ='Your browser version is: '+version;
+</script>
+</body>
+</html>
