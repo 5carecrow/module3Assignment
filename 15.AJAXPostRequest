@@ -1,1 +1,23 @@
+<script>
+    const axios = require('axios');
 
+    function sendPostRequest() {
+        const url = 'https://api.example.com/submit';
+        const payload = {
+            name: 'John Doe',
+            email: 'johndoe@example.com'
+        };
+
+    axios.post(url, payload)
+        .then(response => {
+        // Process the response data
+            console.log(response.data);
+        })
+        .catch(error => {
+        // Handle any errors
+            console.error(error);
+        });
+    }
+
+    sendPostRequest();
+</script>
