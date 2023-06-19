@@ -1,4 +1,14 @@
-//1. Date Object:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+</head>
+<body>
+    <h1>Module 3 Assignment</h1>
+    <h3 id="display"></h3>
+
+<script>
 //part a
 function getDayOfWeek(date) {
     const d = new Date(date);
@@ -28,4 +38,7 @@ function getDayOfWeek(date) {
   const dayOfWeek = getDayOfWeek(date);
   const day = document.getElementById('display');
   day.innerHTML = 'The day is:  '+dayOfWeek;
-  console.log(dayOfWeek);
+  
+</script>
+</body>
+</html>
