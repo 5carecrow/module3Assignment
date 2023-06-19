@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+</head>
+<body>
+    <h1>Module 3 Assignment</h1><br>
+    <h3 id="inputArray"></h3>
+    <h3 id="display"></h3>
 
+<script>
+//part a
+function calculateRootSumOfSquares() {
+  const numbers = [];
+  let input;
+  
+  while (true) {
+    input = prompt("Enter numbers and write  'done' to finish):");
+    
+    if (input === "done") {
+      break;
+    }
+    
+    const number = parseFloat(input);
+    
+    if (!isNaN(number)) {
+      numbers.push(number);
+    } else {
+      alert("Invalid input. Please enter a number.");
+    }
+  }
+  
+  let sumOfSquares = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    sumOfSquares += Math.pow(numbers[i], 2);
+  }
+  
+  document.getElementById("inputArray").innerHTML ='Your numbers : '+numbers;
+  return Math.sqrt(sumOfSquares);
+}
+
+//part b
+const result = calculateRootSumOfSquares();
+document.getElementById("display").innerHTML ='The square root of the sum of squares : '+result;
+  
+</script>
+</body>
+</html>
