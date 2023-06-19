@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+</head>
+<body>
+    <h1>04. Window Object</h1><br>
 
+    <button onclick="openWindowWithDimensions()">Click Me to Open New Window with Dimensions!</button>
+
+<script>
+    //part a
+    function openWindowWithDimensions(url, width, height) {
+    
+    //part b
+    let myWindow = window.open("https://www.example.com", 800, 600);
+}
+
+</script>
+</body>
+</html>
