@@ -7,7 +7,9 @@
 <body>
     <h1>07. JS Common Events</h1><br>
 
-    <p>Mouse over to change the image source</p>
+    <p>Mouse over to change the image source.<br>
+        Click anywhere to know the coordinates of the click.<br>
+        Press any key to know the pressed key code.</p>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZU4mj0GcknU-sLBxuc_PhByVP_rUIS_NwuQ&usqp=CAU"
     id="myImage" alt="Image">
     
