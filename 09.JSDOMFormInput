@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+<body>
+    <h1>09. JS DOM Form Input</h1><br>
 
+    <form id="myForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword">
+
+        <button type="submit">Submit</button>
+      </form>
+    
+<script>
+    const form = document.getElementById("myForm");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("confirmPassword");
+
+    form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Clear previous error messages
+    clearErrorMessages();
+
+    // Validate name field
+    if (nameInput.value === "") {
+        showError("name", "Name is required.");
+    } else if (!isLettersOnly(nameInput.value)) {
+        showError("name", "Name should contain only letters.");
+    }
+
+    // Validate email field
+    if (emailInput.value === "") {
+        showError("email", "Email is required.");
+    } else if (!isValidEmail(emailInput.value)) {
+        showError("email", "Invalid email format.");
+    }
+
+    // Validate password field
+    if (passwordInput.value === "") {
+        showError("password", "Password is required.");
+    } else if (!isValidPassword(passwordInput.value)) {
+        showError(
+        "password",
+        "Password should have a minimum length of 8 characters and "+
+        "contain at least one uppercase letter, one lowercase letter, and one digit."
+        );
+    }
+
+    // Validate confirm password field
+    if (confirmPasswordInput.value === "") {
+        showError("confirmPassword", "Confirm Password is required.");
+    } else if (confirmPasswordInput.value !== passwordInput.value) {
+        showError("confirmPassword", "Passwords do not match.");
+    }
+    });
+
+    function showError(field, errorMessage) {
+    const errorSpan = document.getElementById(field + "Error");
+    errorSpan.textContent = errorMessage;
+    }
+
+    function clearErrorMessages() {
+    const errorSpans = document.querySelectorAll(".error");
+    errorSpans.forEach(function(span) {
+        span.textContent = "";
+    });
+    }
+
+    function isLettersOnly(value) {
+    return /^[a-zA-Z]+$/.test(value);
+    }
+
+    function isValidEmail(value) {
+    // Regular expression for email validation
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+
+    function isValidPassword(value) {
+    // Regular expression for password validation
+    return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(value);
+    }
+
+
+</script>
+</body>
+</html>
