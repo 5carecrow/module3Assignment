@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    
+</head>
+<body>
+    <h1>112. DOM Change Attribute Value</h1><br>
 
+    <img src=
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZU4mj0GcknU-sLBxuc_PhByVP_rUIS_NwuQ&usqp=CAU"
+    id="myImage" alt="Image"><br>
+    <button id="myButton">Click me to change the image!</button>
+    
+<script>
+    
+    const image = document.getElementById("myImage");
+    const button = document.getElementById("myButton");
+
+    button.addEventListener("click", function() {
+        image.src = 
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwt7_fYkQAuOgKHFfrlqeZupplI86XdcPWvw&usqp=CAU";
+    });
+
+</script>
+</body>
+</html>
