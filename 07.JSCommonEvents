@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+</head>
+<body>
+    <h1>07. JS Common Events</h1><br>
 
+    <p>Mouse over to change the image source</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZU4mj0GcknU-sLBxuc_PhByVP_rUIS_NwuQ&usqp=CAU"
+    id="myImage" alt="Image">
+    
+<script>
+    //part a Click event handler
+    document.addEventListener("click", function(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        alert("Clicked at coordinates (x, y): " + x + ", " + y);
+    });
+
+    //part b Keydown event handler
+    document.addEventListener("keydown", function(event) {
+        const keyCode = event.keyCode;
+        alert("Key pressed. Key code: " + keyCode);
+    });
+
+    //part c Mouseover event handler
+    const image = document.getElementById("myImage");
+        image.addEventListener("mouseover", function() {
+        image.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwt7_fYkQAuOgKHFfrlqeZupplI86XdcPWvw&usqp=CAU";
+    });
+
+</script>
+</body>
+</html>
