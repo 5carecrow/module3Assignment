@@ -5,7 +5,7 @@
     <title>Module 3 Assignment</title>
 </head>
 <body>
-    <h1>01. Date Object</h1>
+    <h1>01. Date Object</h1><br>
     <h3 id="display"></h3>
 
 <script>
