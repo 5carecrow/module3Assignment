@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+</head>
+<body>
+    <h1>08. HTML DOM Document</h1><br>
 
+    <button id="myButton">Click Me!</button>
+    <p id="myParagraph">I'm a Paragraph, my text will be changed 
+        when you click the "Click Me!" button.</p>
+    
+<script>
+    
+    const button = document.getElementById("myButton");
+    const paragraph = document.getElementById("myParagraph");
+
+    button.addEventListener("click", function() {
+    paragraph.textContent = "Button Clicked!";
+    });
+
+</script>
+</body>
+</html>
