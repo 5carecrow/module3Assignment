@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <style>
+        .highlight {
+          background-color: yellow;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>10. DOM Manipulate CSS Class</h1><br>
 
+    <button id="highlightButton">Add Highlight</button>
+    <p id="myParagraph">I'm a Paragraph. My text will be highlighted to
+        yellow when the button is clicked.</p>
+    </p>
+    
+<script>
+    
+    const button = document.getElementById("highlightButton");
+    const paragraph = document.getElementById("myParagraph");
+
+    button.addEventListener("click", function() {
+    paragraph.classList.add("highlight");
+    });
+
+</script>
+</body>
+</html>
