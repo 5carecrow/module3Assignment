@@ -19,9 +19,9 @@
     
     const paragraphs = document.querySelectorAll(".sameClass");
 
-for (let i = 0; i < paragraphs.length; i++) {
-    paragraphs[i].style.color = "red";
-}
+    for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.color = "red";
+    }
 
 </script>
 </body>
