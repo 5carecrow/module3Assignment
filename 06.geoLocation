@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 Assignment</title>
+</head>
+<body>
+    <h1>06. Geolocation</h1><br>
 
+    <h3 id="location"></h3>
+    
+<script>
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } 
+    else { 
+        document.getElementById("location").innerHTML =
+        "Geolocation is not supported by this browser.";
+        }
+
+    function showPosition(position) {
+        document.getElementById("location").innerHTML =
+        'Your current location is &#8982;<br>' +
+        'Latitude: '+ position.coords.latitude + "<br>" +
+        'Longitude: ' + position.coords.longitude;
+        }
+</script>
+</body>
+</html>
